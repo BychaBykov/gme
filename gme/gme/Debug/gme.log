@@ -1,0 +1,16 @@
+﻿  Source.cpp
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\camera.h(12,18): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\shader.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+C:\Users\user\source\repos\gameengine\gameengine\opengllibraries\include\GLFW\glfw3.h(123,1): message : see previous definition of 'APIENTRY'
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(65,50): warning C4244: 'argument': conversion from 'const GLfloat' to 'int', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(65,43): warning C4244: 'argument': conversion from 'const GLfloat' to 'int', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(81,29): warning C4244: 'argument': conversion from 'const GLfloat' to 'GLsizei', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(81,22): warning C4244: 'argument': conversion from 'const GLfloat' to 'GLsizei', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(145,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(384,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(385,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(387,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(388,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\user\source\repos\gameengine\gameengine\gme\gme\Source.cpp(439,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  gme.vcxproj -> C:\Users\user\source\repos\gameengine\gameengine\gme\Debug\gme.exe
