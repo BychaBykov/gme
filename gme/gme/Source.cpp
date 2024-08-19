@@ -9,9 +9,9 @@
 
 #include <SOIL/SOIL.h>
 #include "camera.h"
-#include "mesh.h"
+#include "3d_objects/mesh.h"
 #include "interface.h"
-#include "functoptions.h"
+#include "function/functoptions.h"
 
 const GLfloat WIDTH = 1580;
 const GLfloat HEIGHT = 900;
@@ -116,28 +116,8 @@ int main()
 
     glBindVertexArray(0);
 
-    ifstream objectfile;
-    objectfile.open("input.txt");
-    int vert_num, ind_num;
-    objectfile >> vert_num >> ind_num;
     vector<Vertex> formvert;
-    formvert.resize(vert_num);
-    for (int i = 0; i < vert_num; i++) {
-        glm::vec3 pos;
-        GLfloat x, y, z;
-        objectfile >> x >> y >> z;
-        pos.x = x;
-        pos.y = y;
-        pos.z = z;
-        formvert[i].Position = pos;
-    }
     vector<unsigned int> indices;
-    indices.resize(ind_num*3);
-    for (int i = 0; i < ind_num * 3; i++) {
-        int vert;
-        objectfile >> vert;
-        indices[i] = vert;
-    }
     Mesh form;
     bool ex = false;
     while (!glfwWindowShouldClose(window))
@@ -403,6 +383,8 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
     
 }
 
+
+//calculating the z coordinates and adding faces to the structure for further rendering
 bool gen_fun(vector<Vertex>* vert, vector<unsigned int>* ind) {
     Func2arg<float> f(FuncFromInput);
     if (f.fexist) {
@@ -433,6 +415,9 @@ bool gen_fun(vector<Vertex>* vert, vector<unsigned int>* ind) {
     }
     else return false;
 }
+
+//calulate normal in every vertises. now it's just f' = (x-x0)/h
+//this is an intermediate solution for testing some features
 glm::vec3 normals(float x, float y, float step, Func2arg<float>* fun) {
     float dfx = (fun->value(x, y) - fun->value(x + step, y))/step;
     float dfy = (fun->value(x, y) - fun->value(x, y+step))/step;
